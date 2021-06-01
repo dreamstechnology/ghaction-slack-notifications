@@ -1,5 +1,22 @@
 # GitHub Actions Slack notifications
 
+### Dreams setup
+
+To create a release after updating with the upstream run the following:
+
+```shell
+npm ci
+npm install
+npm run release
+git add -A
+git commit -m '$COMMENT'
+git push
+git tag $TAG
+git push --tags
+```
+
+Replace variables with desired values.
+
 - [Document](https://action-slack.netlify.app)
 
 ## Quick Start
