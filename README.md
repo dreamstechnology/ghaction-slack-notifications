@@ -1,11 +1,5 @@
 # GitHub Actions Slack notifications
 
-![](https://github.com/8398a7/action-slack/workflows/test-build/badge.svg)
-![](https://github.com/8398a7/action-slack/workflows/Slack%20Mainline/badge.svg)
-![](https://img.shields.io/github/license/8398a7/action-slack?color=brightgreen)
-![](https://img.shields.io/github/v/release/8398a7/action-slack?color=brightgreen)
-[![codecov](https://codecov.io/gh/8398a7/action-slack/branch/master/graph/badge.svg)](https://codecov.io/gh/8398a7/action-slack)
-
 - [Document](https://action-slack.netlify.app)
 
 ## Quick Start
@@ -14,8 +8,8 @@ You can learn more about it [here](https://action-slack.netlify.app/usecase/01-g
 
 ```yaml
 steps:
-  - uses: 8398a7/action-slack@v3
-    with:
+  - uses:  getdreams/ghaction-slack-notifications@v3
+with:
       status: ${{ job.status }}
       fields: repo,message,commit,author,action,eventName,ref,workflow,job,took # selectable (default: repo,message)
     env:
@@ -31,7 +25,7 @@ You can learn more about it [here](https://action-slack.netlify.app/usecase/02-c
 
 ```yaml
 steps:
-  - uses: 8398a7/action-slack@v3
+  - uses: getdreams/ghaction-slack-notifications@v3
   with:
     status: custom
     fields: workflow,job,commit,repo,ref,author,took
@@ -53,7 +47,7 @@ steps:
 
 ```yaml
 steps:
-  - uses: 8398a7/action-slack@v3
+  - uses: getdreams/ghaction-slack-notifications@v3
     with:
       github_base_url: https://your.ghe.com # Specify your GHE
       status: ${{ job.status }}
